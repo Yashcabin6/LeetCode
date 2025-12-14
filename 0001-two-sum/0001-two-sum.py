@@ -1,8 +1,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        query = {}
+        query = {}  # Hash map for storing remainder and key pair
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
+            if nums[i] in query:
+                return [query[nums[i]],i]   # if remainder is same as current scan we can return 
+            else:
+                query[target-nums[i]]=i;    # storing remainder with key
         return [-1,-1]
