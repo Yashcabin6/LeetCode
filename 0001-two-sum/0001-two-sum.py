@@ -6,4 +6,4 @@ class Solution:
                 return [query[nums[i]],i]   # if remainder is same as current scan we can return 
             else:
                 query[target-nums[i]]=i;    # storing remainder with key
-        return [-1,-1]
+        
