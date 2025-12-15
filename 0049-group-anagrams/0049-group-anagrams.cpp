@@ -17,7 +17,7 @@ public:
             query_map[key].push_back(s);
         }
         vector<vector<string>> ret;
-        for(auto key : query_map){
+        for(auto& key : query_map){
             ret.push_back(key.second);
         }
         return ret;
