@@ -1,5 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        # Zip is slower than the normal loop interestingly
         if len(s)!= len(t):
             return False
         query = [0]*26
